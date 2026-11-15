@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+.hidden {
+  display: none !important;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.loader span {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #333;
+  animation: loading 1s infinite ease-in-out;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    background: #333;
+  }
+
+  50% {
+    background: #fff;
+    transform: scale(1.2);
+    box-shadow: 0 0 12px #fff;
+  }
+}
+
+.developer-page {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #0e1215;
+  padding: 25px;
+  color: white;
+  overflow-y: auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.developer-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.back-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.code-editor {
+  background: #151c20;
+  border: 1px solid #26352d;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.code-title {
+  display: flex;
+  justify-content: space-between;
+  color: #8a9990;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.code-lines {
+  font-family: monospace;
+  color: #00ff88;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.code-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding-left: 15px;
+}
+
+.code-row input {
+  width: 145px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #00ff88;
+  font-family: monospace;
+  font-size: 15px;
+  letter-spacing: 1px;
+  caret-color: white;
+}
+
+.run-code-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background: #00ff88;
+  color: #0e1215;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
